@@ -1,6 +1,6 @@
 namespace Group_C;
 
-public abstract class Operation:ImplicitGeometry
+public abstract class Operation : ImplicitGeometry
 {
     public ImplicitGeometry operand1;
     public ImplicitGeometry operand2;

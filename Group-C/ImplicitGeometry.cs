@@ -6,11 +6,11 @@ public abstract class ImplicitGeometry
 {
     public abstract bool IsInside(double x, double y);
 
-    public void Visualize(int width, int height, double resolution)
+    public void Visualize(int width, int height)
     {
         var lines = new string[width];
         int lineIndex = 0;
-        for (double i = 0; i < height; i += resolution)
+        for (double i = 0; i < height; i++)
         {
             var line = "";
             for (double j = 0; j < width; j++)
@@ -21,8 +21,6 @@ public abstract class ImplicitGeometry
             lines[lineIndex] = line;
             lineIndex++;
         }
-
-        File.WriteAllLines("output.txt", lines);
 
         Console.Write(File.ReadAllText("output.txt"));
     }
