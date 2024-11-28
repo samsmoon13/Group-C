@@ -24,28 +24,33 @@ This project is a .NET 9.0 console application that visualizes implicit geometri
 The main task is to:
 1. Implement a class hierarchy for implicit geometry as shown in the provided structure.
 2. Use the `Visualize` method to create a grid-based numerical representation of the geometry.
-3. Model complex shapes (e.g., rings, combinations of basic shapes) using set operations like union, intersection, and difference.
-4. Render these geometries in the console using adjustable resolution for both coarse and fine grids.
+3. Model complex shapes (e.g.circules,rectangles, combinations of basic shapes) using set operations like union, intersection, and difference.
+4. Render these geometries in the console.
 
 ---
-
 ## Class Hierarchy
 1. **ImplicitGeometry** (Abstract Class):
-   - Base class for all geometric shapes.
-   - Defines the `IsInside` method to determine if a point lies inside the shape.
-   - Contains the `Visualize` method for grid-based visualization.
+    - Base class for all geometric shapes.
+    - Defines the `IsInside` method to determine if a point lies inside the shape.
+    - Contains the `Visualize` method for grid-based visualization.
 
 2. **Circle** (Derived Class):
-   - Represents a circle defined by its radius and center point.
-   - Implements the `IsInside` method to check whether a point lies within the circle.
+    - Represents a circle defined by its radius and center point.
+    - Implements the `IsInside` method to check whether a point lies within the circle.
 
-3. **Ring** (Derived Class):
-   - Combines two circles to form a ring using set difference.
-   - Implements `IsInside` by checking that a point is inside the outer circle but outside the inner circle.
+3. **Rectangle** (Derived Class):
+    - Represents a rectangle defined by its top-left and bottom-right corners.
+    - Implements the `IsInside` method to check whether a point lies within the rectangle’s bounds.
 
-4. **Union**, **Intersection**, and **Difference** (Derived Classes):
-   - Perform set operations to combine or subtract geometries.
+4. **Operation** (Abstract Class):
+    - A base class for geometric operations such as `Union`, `Intersection`, and `Difference`.
+    - Takes two `ImplicitGeometry` objects as operands and applies set operations.
 
+5. **Union**, **Intersection**, and **Difference** (Derived Classes):
+    - Perform set operations to combine or subtract geometries.
+    - These operations allow for more complex geometric shapes like unions of multiple shapes or intersections.
+
+---
 ---
 
 ## How to Run
@@ -69,11 +74,10 @@ Run:
 ## Example Usage
 ```csharp
 var circle = new Circle(5, new Point(10, 10));
-circle.Visualize(20, 20, 0.5);
+circle.Visualize(20, 20);
 
 Width: 20
 Height: 20
-Resolution: 0.5
 
 Output (Console Visualization of a Circle):
     ooo     
@@ -85,11 +89,14 @@ ooooooooo
 
 ## Customization
 1. **Modify grid dimensions (width and height) for different visualization sizes.**
-2. **Adjust step (resolution) for finer or coarser grids.**
 3. **Extend the ImplicitGeometry class to add new shapes.**:
 
 ## Contributors
- Samin Eghbali
+Group C:\
+ Samin Eghbali\
+ Omar Haddadin\
+ Melisa Cilingiroglu\
+ Olena Dubrovska
  
 
 
