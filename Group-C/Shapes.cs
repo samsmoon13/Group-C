@@ -4,18 +4,18 @@ public class Shapes
 {
     public static ImplicitGeometry Tshape()
     {
-        Rectangle rectangle4 = new Rectangle(20, 0, 25, 50);
-        Rectangle rectangle5 = new Rectangle(20, 20, 70, 30);
+        Rectangle rectangle4 = new Rectangle(5, 5, 10, 25);
+        Rectangle rectangle5 = new Rectangle(10, 12.5, 25, 17.5);
         Union tShape = new Union(rectangle4, rectangle5);
         return tShape;
     }
 
     public static ImplicitGeometry Ushape()
     {
-        var circle1 = new Circle(50, 85, 25);
-        var rectangle1 = new Rectangle(20, 60, 50, 110);
-        var circle2 = new Circle(50, 85, 15);
-        var rectangle2 = new Rectangle(20, 70, 50, 100);
+        var circle1 = new Circle(15,40, 10);
+        var rectangle1 = new Rectangle(5, 30, 15, 50);
+        var circle2 = new Circle(15,40, 5);
+        var rectangle2 = new Rectangle(5, 35, 15, 45);
         var ushape = new Union(rectangle1, circle1);
         var uShape1 = new Union(rectangle2, circle2);
         var ushape3 = new Difference(ushape, uShape1);
@@ -24,12 +24,12 @@ public class Shapes
 
     public static ImplicitGeometry Mshape()
     {
-        var circle1 = new Circle(20, 150, 20);
-        var circle2 = new Circle(20, 150, 15);
+        var circle1 = new Circle(0, 67.3, 13);
+        var circle2 = new Circle(0, 67.3, 10);
 
-        var rectangle1 = new Rectangle(0, 120, 74, 130);
-        var rectangle2 = new Rectangle(0, 170, 74, 180);
-        var rectangle3 = new Rectangle(0, 120, 18, 180);
+        var rectangle1 = new Rectangle(5, 55, 25, 59);
+        var rectangle2 = new Rectangle(5,75 , 25, 82);
+        var rectangle3 = new Rectangle(0, 55, 4, 82);
         var rectangles = new Union(rectangle1, rectangle2);
         var circles = new Difference(circle1, circle2);
         var unions = new Union(rectangles, circles);

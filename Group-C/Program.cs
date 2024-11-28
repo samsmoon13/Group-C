@@ -6,7 +6,7 @@ var ushape = Shapes.Ushape();
 var mshape = Shapes.Mshape();
 var tushape = new Union(tshape,ushape);
 var tumshape = new Union(tushape,mshape);
-tumshape.Visualize(280,80,2.5);
+tumshape.Visualize(80,80,1.8);
 
 
 
