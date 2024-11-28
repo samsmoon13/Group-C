@@ -91,12 +91,6 @@ ooooooooo
 1. **Modify grid dimensions (width and height) for different visualization sizes.**
 3. **Extend the ImplicitGeometry class to add new shapes.**:
 
-## Contributors
-Group C:\
- Samin Eghbali\
- Omar Haddadin\
- Melisa Cilingiroglu\
- Olena Dubrovska
  
 
 
